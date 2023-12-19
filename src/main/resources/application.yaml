@@ -9,7 +9,9 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:7449/eureka
   instance:
+    hostname: localhost
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    prefer-ip-address: false
 
 #mvn install
 #\target>java -jar doctor-service-0.0.1-SNAPSHOT.jar
